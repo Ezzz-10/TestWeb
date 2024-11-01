@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body, html {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Style for the entry page */
+    #entry-page {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #222;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      transition: opacity 0.6s;
+    }
+
+    #entry-image {
+      width: 300px;
+      height: 300px;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: transform 0.3s;
+    }
+
+    #entry-image:hover {
+      transform: scale(1.05);
+    }
+
+    /* Style for the home page */
+    #home-page {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: url('https://cdn.discordapp.com/attachments/837800626645499944/1301998984029671465/some-pics-i-took-in-rural-japan-with-a-film-camera-v0-fw60qp8oq9yd1.webp?ex=6726848b&is=6725330b&hm=338c531e996b70aa37c06c102ec50cef7370e41c039be4de5d8a5e4eb822dd46&') no-repeat center center/cover;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .translucent-box {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      width: 80%;
+      max-width: 400px;
+    }
+
+    h1 {
+      color: #333;
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+
+    .social-links {
+      list-style: none;
+    }
+
+    .social-links li {
+      margin: 10px 0;
+    }
+
+    .social-links a {
+      color: #0066cc;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+
+    .social-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Entry Page -->
+  <div id="entry-page">
+    <img id="entry-image" src="https://cdn.discordapp.com/attachments/837800626645499944/1301998514863345740/IMG_7845.jpg?ex=6726841b&is=6725329b&hm=2d7109d6dbb8cb597990895487d6375f0bee3faeff67f8665bed92b3efdaab64&" alt="Click to Enter">
+  </div>
+
+  <!-- Home Page -->
+  <div id="home-page">
+    <div class="translucent-box">
+      <h1>Welcome to My Page</h1>
+      <ul class="social-links">
+        <li><a href="https://www.tiktok.com/@ezandecho" target="_blank">TikTok</a></li>
+        <li><a href="discordapp.com/users/692826680141807627" target="_blank">Discord</a></li>
+        <li><a href="https://www.roblox.com/users/104190158/profile" target="_blank">Roblox</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript to handle the page switch
+    document.getElementById('entry-image').addEventListener('click', function() {
+      document.getElementById('entry-page').style.display = 'none';
+      document.getElementById('home-page').style.display = 'flex';
+    });
+  </script>
+
+</body>
+</html>
